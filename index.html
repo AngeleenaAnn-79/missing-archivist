@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Missing Archivist · Card Catalog</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="1">
+<header>
+  <p class="stamp">Hollis Public Library · Card Catalog</p>
+  <h1>The Missing Archivist</h1>
+</header>
+<main>
+  <section class="card">
+    <p>Head archivist <strong>Mira Voss</strong> hasn't been seen since Tuesday. Her desk was left open, and one note was pinned to the catalog board:</p>
+    <blockquote>"She always filed things under the wrong letter."</blockquote>
+    <p>Follow her trail room by room. Each page hides a word, and that word is the password to the next room.</p>
+  </section>
+
+  <section class="card">
+    <h2>Shelf 12 · last catalogued by M. Voss</h2>
+    <table>
+      <tr><th>Shelf</th><th>Title</th><th>Author</th></tr>
+      <tr><td>1</td><td class="t">Lanterns of the Old Harbor</td><td>E. Marsh</td></tr>
+      <tr><td>2</td><td class="t">Echoes in Empty Halls</td><td>J. Whitlow</td></tr>
+      <tr><td>3</td><td class="t">Dust and Dovetails</td><td>A. Brandt</td></tr>
+      <tr><td>4</td><td class="t">Gilded Pages</td><td>C. Okonkwo</td></tr>
+      <tr><td>5</td><td class="t">Evenings with Ink</td><td>R. Fenwick</td></tr>
+      <tr><td>6</td><td class="t">Reckoning at Dawn</td><td>T. Delacroix</td></tr>
+    </table>
+  </section>
+
+  <form id="answer" class="card">
+    <label>The word she left: <input name="w" autocomplete="off" required></label>
+    <button>File it</button>
+    <p class="msg"></p>
+  </form>
+  <p id="next" class="card" hidden>Filed. <a href="reading-room.html">Enter the Reading Room →</a><br>The password is the word you just found.</p>
+
+</main>
+<script src="game.js"></script>
+</body>
+</html>

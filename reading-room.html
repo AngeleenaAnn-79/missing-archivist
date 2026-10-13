@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Missing Archivist · Reading Room</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="2">
+<header>
+  <p class="stamp">Hollis Public Library · Reading Room</p>
+  <h1>The Reading Room</h1>
+</header>
+<main>
+  <form id="gate" class="card">
+    <h2>🔒 Locked</h2>
+    <p>Enter the password you found in the Card Catalog.</p>
+    <input name="w" autocomplete="off" required>
+    <button>Unlock</button>
+    <p class="msg"></p>
+  </form>
+
+  <div id="content" hidden>
+    <section class="card">
+      <p>The room is silent. A sheet of letters is pinned to the notice board, with a note:</p>
+      <blockquote>"I hid a five-letter word that tells the time. It runs in a straight line, in any direction."</blockquote>
+    </section>
+
+    <section class="card">
+      <h2>Notice board</h2>
+      <table class="ws">
+        <tr><td>U</td><td>G</td><td>J</td><td>P</td><td>G</td><td>D</td><td>R</td></tr>
+        <tr><td>B</td><td>C</td><td>A</td><td>U</td><td>V</td><td>J</td><td>E</td></tr>
+        <tr><td>R</td><td>Y</td><td>L</td><td>E</td><td>S</td><td>P</td><td>Y</td></tr>
+        <tr><td>B</td><td>V</td><td>N</td><td>O</td><td>G</td><td>Z</td><td>U</td></tr>
+        <tr><td>Q</td><td>U</td><td>Y</td><td>W</td><td>C</td><td>V</td><td>F</td></tr>
+        <tr><td>H</td><td>D</td><td>J</td><td>J</td><td>G</td><td>K</td><td>H</td></tr>
+        <tr><td>B</td><td>R</td><td>A</td><td>S</td><td>M</td><td>F</td><td>A</td></tr>
+      </table>
+    </section>
+
+    <form id="answer" class="card">
+      <label>The word she left: <input name="w" autocomplete="off" required></label>
+      <button>File it</button>
+      <p class="msg"></p>
+    </form>
+    <p id="next" class="card" hidden>Filed. <a href="staff.html">Open the Staff Directory →</a><br>The password is the word you just found.</p>
+
+  </div>
+</main>
+<script src="game.js"></script>
+</body>
+</html>

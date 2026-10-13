@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Missing Archivist · Staff Directory</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="3">
+<header>
+  <p class="stamp">Hollis Public Library · Staff</p>
+  <h1>Staff Directory</h1>
+</header>
+<main>
+  <form id="gate" class="card">
+    <h2>🔒 Locked</h2>
+    <p>Enter the password you found in the Reading Room.</p>
+    <input name="w" autocomplete="off" required>
+    <button>Unlock</button>
+    <p class="msg"></p>
+  </form>
+
+  <div id="content" hidden>
+    <section class="card">
+      <p>Everyone else's bio looks ordinary. Mira's entry, which she wrote herself, does not.</p>
+    </section>
+
+    <section class="card">
+      <h2>Mira Voss · Head Archivist <small>(away)</small></h2>
+      <p class="bio" id="mira">Mira joined the library in 2009. She Spent years Preserving the town's old maps, Is fond of strong tea, Reads before dawn, Always arrives early, and Loves quiet corners.</p>
+    </section>
+    <section class="card">
+      <h2>Tomas Iyer · Circulation Desk</h2>
+      <p>Tomas has worked the front desk for six years. He runs the Saturday chess club and swears the returns slot is haunted.</p>
+    </section>
+    <section class="card">
+      <h2>Ruth Calloway · Children's Section</h2>
+      <p>Ruth reads aloud every Thursday afternoon. She keeps a jar of stickers under the counter and tells no one.</p>
+    </section>
+    <section class="card">
+      <h2>Ben Okafor · Night Custodian</h2>
+      <p>Ben locks up at ten. He last saw Mira heading toward the old stairwell carrying a heavy book.</p>
+    </section>
+
+    <form id="answer" class="card">
+      <label>The word she left: <input name="w" autocomplete="off" required></label>
+      <button>File it</button>
+      <p class="msg"></p>
+    </form>
+    <p id="next" class="card" hidden>Filed. <a href="calendar.html">Check the Due Dates Calendar →</a><br>The password is the word you just found.</p>
+
+  </div>
+</main>
+<script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Missing Archivist · Due Dates</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="4">
+<header>
+  <p class="stamp">Hollis Public Library · Circulation</p>
+  <h1>Due Dates Calendar</h1>
+</header>
+<main>
+  <form id="gate" class="card">
+    <h2>🔒 Locked</h2>
+    <p>Enter the password you found in the Staff Directory.</p>
+    <input name="w" autocomplete="off" required>
+    <button>Unlock</button>
+    <p class="msg"></p>
+  </form>
+
+  <div id="content" hidden>
+    <section class="card">
+      <p>Mira circled a few dates and numbered them in the order she stamped them. Beside the calendar she wrote:</p>
+      <blockquote>"Dates are only numbers, until you count the alphabet."</blockquote>
+    </section>
+
+    <section class="card">
+      <h2>October</h2>
+      <table class="cal">
+        <thead><tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr></thead>
+        <tbody id="days"></tbody>
+      </table>
+    </section>
+
+    <form id="answer" class="card">
+      <label>The word she left: <input name="w" autocomplete="off" required></label>
+      <button>File it</button>
+      <p class="msg"></p>
+    </form>
+    <p id="next" class="card" hidden>Filed. <a href="lost-found.html">Go to the Lost &amp; Found →</a></p>
+
+  </div>
+</main>
+<script>
+const circled = { 20: 1, 15: 2, 23: 3, 5: 4, 18: 5 }; // date -> stamp order
+// Oct 1 is a Thursday, so four blank cells come first.
+const cells = [...Array(4).fill(""), ...Array.from({ length: 31 }, (_, i) => i + 1)];
+let html = "";
+cells.forEach((d, i) => {
+  if (i % 7 === 0) html += "<tr>";
+  html += `<td>${circled[d] ? `<b class="ring">${d}<sup>${circled[d]}</sup></b>` : d}</td>`;
+  if (i % 7 === 6) html += "</tr>";
+});
+document.getElementById("days").innerHTML = html;
+</script>
+<script src="game.js"></script>
+</body>
+</html>

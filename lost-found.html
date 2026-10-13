@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Missing Archivist · Lost &amp; Found</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="5">
+<header>
+  <p class="stamp">Hollis Public Library · Lost &amp; Found</p>
+  <h1>The Locked Box</h1>
+</header>
+<main>
+  <section class="card">
+    <p>At the back of the Lost &amp; Found sits a steel box with four dials. A card is taped to the lid:</p>
+    <blockquote>"Four rooms, four words. Use them in the order I left them."</blockquote>
+  </section>
+
+  <form id="final" class="card">
+    <div class="dials">
+      <label>Catalog<input name="w1" autocomplete="off" required></label>
+      <label>Reading Room<input name="w2" autocomplete="off" required></label>
+      <label>Staff<input name="w3" autocomplete="off" required></label>
+      <label>Calendar<input name="w4" autocomplete="off" required></label>
+    </div>
+    <button>Open the box</button>
+    <p class="msg"></p>
+  </form>
+
+  <section id="found" class="card" hidden>
+    <h2>Click.</h2>
+    <p>Inside is a brass key and a note in Mira's handwriting:</p>
+    <blockquote>"You found me. I'm safe. I took the original ledger to the old clock tower, to the top of the spiral stairs, so no one could sell it. Come up and I'll explain everything."</blockquote>
+    <p><strong>Case closed.</strong></p>
+    <p>Stuck to the back of the note is a sealed slip. The code for the next website:</p>
+    <p class="code"><code id="code">decrypting…</code></p>
+  </section>
+
+</main>
+<script src="game.js"></script>
+</body>
+</html>
